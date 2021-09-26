@@ -1,0 +1,13 @@
+[
+	{"caption": "-"},
+	{
+		"caption": "Browse Files",
+		"command": "side_bar_quick_file_browser",
+		"args": {"paths": [], "recursive": false}
+	},
+	{
+		"caption": "Find Files",
+		"command": "side_bar_quick_file_browser",
+		"args": {"paths": [], "recursive": true}
+	}
+]

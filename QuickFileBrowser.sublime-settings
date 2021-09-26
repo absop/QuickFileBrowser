@@ -1,0 +1,56 @@
+{
+    "debug": false,
+
+    // Convert Windows paths to UNIX-compatible paths
+    "use_unix_style_path": true,
+
+    "show_hidden_files": true,
+
+    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*"],
+
+    "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj", "*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", ".directory", "desktop.ini", "*.class", "*.psd", "*.db", "*.sublime-workspace"],
+
+    "file_types": {
+        "book": {
+            "icon": "📖",
+            "extensions": [".pdf"]
+        },
+        "image": {
+            "icon": "🖼",
+            "extensions": [".png", ".jpg", ".jpeg"]
+        },
+        "executable": {
+            "icon": "Run",
+            "extensions": [".exe"],
+        },
+        "file": {
+            "icon": "✏",
+            "extensions": ".*",
+        },
+        "folder": {
+            "icon": "📂",
+            "extensions": null,
+        },
+    },
+
+    /* Some emojis that might help:
+     * 📋: clipboard,
+     * ✂: scissors
+     * 📌: pushpin,
+     * 📄: page facing up,
+     * 📝: memo,
+     * 🗃: card file box,
+     * 🗄: file cabinet,
+     * 📁: file folder,
+     * 📂: open file folder,
+     * 💼: briefcase,
+     * 📗: green book,
+     * 📘: blue book,
+     * 📙: orange book,
+     * 📚: books,
+     * 📖: open book
+     * 🖼: framed picture,
+     * 🎨: artist palette,
+     * ✏: pencil
+     */
+}

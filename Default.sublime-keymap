@@ -1,0 +1,12 @@
+[
+    {
+        "keys": ["alt+/"],
+        "command": "window_quick_file_browser",
+        "args": {"recursive": false}
+    },
+    {
+        "keys": ["shift+alt+/"],
+        "command": "window_quick_file_browser",
+        "args": {"recursive": true}
+    }
+]

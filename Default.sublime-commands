@@ -1,0 +1,30 @@
+[
+    {
+        "caption": "Preferences: QuickFileBrowser Settings",
+        "command": "edit_settings",
+        "args": {
+          "base_file": "${packages}/QuickFileBrowser/QuickFileBrowser.sublime-settings",
+          "default": "\n{\n\t$0\n}\n"
+        }
+    },
+    {
+        "caption": "QuickFileBrowser: Browse Files",
+        "command": "window_quick_file_browser",
+        "args": {"recursive": false}
+    },
+    {
+        "caption": "QuickFileBrowser: Browse Files (Input Path)",
+        "command": "window_quick_file_browser_input_path",
+        "args": {"recursive": false}
+    },
+    {
+        "caption": "QuickFileBrowser: Find Files",
+        "command": "window_quick_file_browser",
+        "args": {"recursive": true}
+    },
+    {
+        "caption": "QuickFileBrowser: Find Files (Input Path)",
+        "command": "window_quick_file_browser_input_path",
+        "args": {"recursive": true}
+    },
+]
