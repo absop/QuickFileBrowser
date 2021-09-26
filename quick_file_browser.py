@@ -277,6 +277,7 @@ class QuickPanelFileBrowser:
                     file_type_icons[extension] = file_type_icon
             else:
                 file_type_icons[extensions] = file_type_icon
+
         if '.*' not in file_type_icons:
             file_type_icons['.*'] = FileTypeIcon('file', 'Open')
         if None not in file_type_icons:
