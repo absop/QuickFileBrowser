@@ -251,7 +251,11 @@ class QuickPanelFileBrowser:
                     show(items, on_done, flags=self.FLAGS)
             else:
                 if path != curdir:
-                    self.browse(path)
+                    try:
+                        self.browse(path)
+                    except Exception as e:
+                        sublime.status_message(str(e))
+                        show(items, on_done, flags=self.FLAGS)
                 else:
                     show(items, on_done, flags=self.FLAGS)
 
