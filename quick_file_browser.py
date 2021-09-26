@@ -105,7 +105,7 @@ KIND_DIRECTORY = (sublime.KIND_ID_VARIABLE, 'D', "Directory")
 
 class QuickPanelFileBrowser:
     path_list = {}
-    separator = f',{8 * "&nbsp;"}'
+    separator = 4 * '&nbsp;'
     FLAGS = ( sublime.KEEP_OPEN_ON_FOCUS_LOST
             | sublime.WANT_EVENT
             | sublime.MONOSPACE_FONT
@@ -210,18 +210,30 @@ class QuickPanelFileBrowser:
                 'open_in_sublime': ext == '.*'
             }
         )
+
+        def save_path_url(path):
+            return sublime.command_url(
+                'quick_file_browser_save_path',
+                args={'path': path}
+            )
+
+        def insert_path_url(path):
+            return sublime.command_url(
+                'insert',
+                args={'characters': path}
+            )
+
+        def make_tags(operation, make_url):
+            return f"""\
+<em>{operation} Path</em>:{2 * '&nbsp;'}\
+<a href="{make_url(absolute)}">absolute</a>,{2 * '&nbsp;'}\
+<a href="{make_url(relative)}">relative</a>;"""
+
         return [
-            self.save_path_tag('relative', relative),
-            self.save_path_tag('absolute', absolute),
+            make_tags('Copy', save_path_url),
+            make_tags('Insert', insert_path_url),
             f'<a href="{url}">{icon}</a>'
         ]
-
-    def save_path_tag(self, type, path):
-        url = sublime.command_url(
-            'quick_file_browser_save_path',
-            args={'path': path}
-        )
-        return f'<a href="{url}">Copy {type} path</a>'
 
     def show_quick_panel(self, paths, items, curdir):
         def on_done(index, event):
