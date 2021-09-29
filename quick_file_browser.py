@@ -159,6 +159,7 @@ class QuickPanelFileBrowser:
                         kind=KIND_FILE
                     )
                 )
+        Debug.print(f'items: {len(items)}')
         self.show_quick_panel(paths, items, '')
 
     def browse(self, curdir):
@@ -188,6 +189,7 @@ class QuickPanelFileBrowser:
                 kind = KIND_DIRECTORY
             paths.append(absolute)
             items.append(self.make_item(entry, absolute, ext, kind))
+        Debug.print(f'items: {len(items)}')
         self.show_quick_panel(paths, items, curdir)
 
     def make_item(self, entry, absolute, ext, kind):
